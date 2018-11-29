@@ -11,4 +11,4 @@ addons:
     organization: "dp-dev-github"
 script:
   - mvn clean install
-mvn sonar:sonar -Dsonar.projectKey=dp-dev_testingCI -Dsonar.organization=dp-dev-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=SONAR_TOKEN
+  - mvn sonar:sonar -Dsonar.projectKey=dp-dev_testingCI -Dsonar.organization=dp-dev-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=SONAR_TOKEN
