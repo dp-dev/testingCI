@@ -6,5 +6,11 @@ jdk:
 sudo: false
 before_script: cd TestingTravis
 install: true
+addons:
+  sonarcloud:
+    organization: "dp-dev-github"
+    token:
+      secure: ca98b18edd9be97e5f89df7e9697826fd71e3a80
 script:
   - mvn clean install
+  - sonar-scanner
