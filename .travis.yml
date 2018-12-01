@@ -8,7 +8,9 @@ before_script: cd TestingTravis
 install: true
 addons:
   sonarcloud:
-    organization: "dp-dev-github"
+    organization: dp-dev-github
+    token:
+      secure: 84d02b8b974c790021b09cf84002af0e52f1c77f
 script:
   - mvn clean install
-  - mvn sonar:sonar -Dsonar.projectKey=dp-dev_testingCI -Dsonar.organization=dp-dev-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=SONAR_TOKEN
+
