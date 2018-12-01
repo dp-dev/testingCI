@@ -11,10 +11,12 @@ public class App {
 	private static final Logger LOG = Logger.getLogger(App.class.getName());
 	
 	public static void main(String[] args) {
-		LOG.log(Level.INFO, "Hello World!");
+		App app = new App();
+		app.add(2, 3);
 	}
 	
 	public int add(int no1, int no2) {
+		LOG.log(Level.INFO, "Add " + no1 + " + " + no2);
 		return no1 + no2;
 	}
 }
