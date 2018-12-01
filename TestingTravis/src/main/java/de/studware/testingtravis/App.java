@@ -9,6 +9,7 @@ import java.util.logging.Logger;
  */
 public class App {
 	private static final Logger LOG = Logger.getLogger(App.class.getName());
+	String msg;
 	
 	public static void main(String[] args) {
 		App app = new App();
@@ -16,8 +17,14 @@ public class App {
 	}
 	
 	public int add(int no1, int no2) {
-		String msg = String.format("Add %d + %d", no1, no2);
+		msg = String.format("Add %d + %d", no1, no2);
 		LOG.log(Level.INFO, msg);
 		return no1 + no2;
+	}
+	
+	public int sub(int no1, int no2) {
+		msg = String.format("Sub %d - %d", no1, no2);
+		LOG.log(Level.INFO, msg);
+		return no1 - no2;
 	}
 }
