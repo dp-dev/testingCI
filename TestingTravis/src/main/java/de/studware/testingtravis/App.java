@@ -16,7 +16,7 @@ public class App {
 	}
 	
 	public int add(int no1, int no2) {
-		String msg = String.format("Add {0} + {1}", no1, no2);
+		String msg = String.format("Add %d + %d", no1, no2);
 		LOG.log(Level.INFO, msg);
 		return no1 + no2;
 	}
