@@ -12,5 +12,5 @@ addons:
     token:
       secure: 84d02b8b974c790021b09cf84002af0e52f1c77f
 script:
-  - mvn clean install
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
