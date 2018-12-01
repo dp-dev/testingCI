@@ -16,7 +16,7 @@ public class App {
 	}
 	
 	public int add(int no1, int no2) {
-		LOG.log(Level.INFO, "Add " + no1 + " + " + no2);
+		LOG.log(Level.INFO, String.format("Add {0} + {1}", no1, no2));
 		return no1 + no2;
 	}
 }
