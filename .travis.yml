@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: dp-dev-github
     token:
-      secure: 84d02b8b974c790021b09cf84002af0e52f1c77f
+      secure: SONAR_TOKEN
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
