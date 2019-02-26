@@ -1,14 +1,10 @@
 package de.studware.testingtravis;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-/**
- * Hello world!
- *
- */
 public class App {
-	private static final Logger LOG = Logger.getLogger(App.class.getName());
+	private static final Logger log = LoggerFactory.getLogger(AppTest.class);
 	String msg;
 	
 	public static void main(String[] args) {
@@ -17,14 +13,12 @@ public class App {
 	}
 	
 	public int add(int no1, int no2) {
-		msg = String.format("Add %d + %d", no1, no2);
-		LOG.log(Level.INFO, msg);
+		log.info("Add {} + {}", no1, no2);
 		return no1 + no2;
 	}
 	
 	public int sub(int no1, int no2) {
-		msg = String.format("Sub %d - %d", no1, no2);
-		LOG.log(Level.INFO, msg);
+		log.info("Sub {} - {}", no1, no2);
 		return no1 - no2;
 	}
 }

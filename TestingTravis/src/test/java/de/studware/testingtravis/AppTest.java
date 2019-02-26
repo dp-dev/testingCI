@@ -7,45 +7,39 @@ import static org.mockito.Mockito.*;
 import java.util.List;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest {
-	/**
-	 * Create the test case
-	 *
-	 * @param testName
-	 *            name of the test case
-	 */
+	private static final Logger log = LoggerFactory.getLogger(AppTest.class);
 
 	@Test
 	public void checkAddition() {
-		System.out.println("Check Test 1");
+		log.info("Check Test 1");
 		assertEquals(5, new App().add(2, 3));
 	}
 
 	@Test
 	public void checkAdditionFalse() {
-		System.out.println("Check Test 2");
+		log.info("Check Test 2");
 		assertFalse(5 == new App().add(2, 4));
 	}
 
 	@Test
 	public void checkSubtraction() {
-		System.out.println("Check Test 3");
+		log.info("Check Test 3");
 		assertEquals(-1, new App().sub(2, 3));
 	}
 
 	@Test
 	public void checkSubtractionFalse() {
-		System.out.println("Check Test 4");
+		log.info("Check Test 4");
 		assertFalse(-1 == new App().sub(2, 4));
 	}
 
 	@Test
 	public void checkMockito() {
-		System.out.println("Mockito Check");
+		log.info("Mockito Check");
 		List<String> mockedList = mock(List.class);
 		mockedList.add("one");
 		mockedList.clear();
