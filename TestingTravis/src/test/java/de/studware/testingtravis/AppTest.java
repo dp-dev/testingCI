@@ -2,11 +2,11 @@ package de.studware.testingtravis;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.mockito.Mockito.*;
 
 import java.util.List;
 
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,10 +40,10 @@ public class AppTest {
 	@Test
 	public void checkMockito() {
 		log.info("Mockito Check");
-		List<String> mockedList = mock(List.class);
+		List<String> mockedList = Mockito.mock(List.class);
 		mockedList.add("one");
 		mockedList.clear();
-		verify(mockedList).add("one");
-		verify(mockedList).clear();
+		Mockito.verify(mockedList).add("one");
+		Mockito.verify(mockedList).clear();
 	}
 }
