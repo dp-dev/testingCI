@@ -7,13 +7,7 @@ public class App {
 	private static final Logger log = LoggerFactory.getLogger(App.class);
 	
 	public static void main(String[] args) {
-		App app = new App();
-		app.checkAllMethods();
-	}
-	
-	public void checkAllMethods() {
-		add(2, 3);
-		sub(8, 7);
+		log.info("Project is only for testing!");
 	}
 	
 	public int add(int no1, int no2) {
