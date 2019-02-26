@@ -5,11 +5,14 @@ import static org.junit.Assert.assertFalse;
 
 import java.util.List;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.mockito.Mockito;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AppTest {
 	private static final Logger log = LoggerFactory.getLogger(AppTest.class);
 
